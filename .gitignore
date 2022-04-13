@@ -3,3 +3,7 @@ node_modules
 dist
 dist-ssr
 *.local
+
+# yarn
+yarn-error.log
+yarn.lock

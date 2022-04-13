@@ -1,0 +1,24 @@
+* {
+  /*font-family: 'Avenir', Helvetica, 'Arial', 'Noto Sans TC', 微軟正黑體, sans-serif;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* color: #2c3e50; */
+}
+
+body {
+  font-family: "Rubik", "Noto Sans TC", "微軟正黑體", "Segoe UI", Helvetica,
+    "Arial", sans-serif;
+  /*font-family: Roobert, 'Sans_Regular', 'Arial', 'Noto Sans TC', 微軟正黑體, Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  font-weight: 600;
+  font-feature-settings: "tnum" 1, "ss03" 1;
+  -webkit-font-smoothing: antialiased;
+  background-color: #F8F8F8;
+  color: #1a2938;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+p {
+  white-space: pre-wrap;
+  line-height: 1.7;
+}

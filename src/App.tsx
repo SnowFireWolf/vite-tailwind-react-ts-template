@@ -1,45 +1,52 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { useEffect } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+// router config
+import { useLocation } from "react-router-dom";
+import RouteConfig from "@/router";
+
+// style
+import "@/styles/reset.css";
+import "@/styles/global.css";
+
+//layout
+import BaseLayout from "@/components/layout";
+
+
+
+export default function App() {
+  const APP_NAME = "vite-react-template-typescript";
+
+  const TitleMap = [
+    {
+      path: "/",
+      title: `Home - ${APP_NAME}`,
+    },
+    {
+      path: "/about",
+      title: `About - ${APP_NAME}`,
+    },
+    {
+      path: "*",
+      title: `Not Found - ${APP_NAME}`,
+    },
+  ];
+
+  const currentLocation = useLocation();
+
+  useEffect(() => {
+    const curTitle = TitleMap.find(
+      (item) => item.path === currentLocation.pathname
+    );
+    if (curTitle && curTitle.title) {
+      document.title = curTitle.title;
+    }
+  }, [currentLocation]);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+    <React.Fragment>
+      <BaseLayout>
+        <RouteConfig />
+      </BaseLayout>
+    </React.Fragment>
+  );
 }
-
-export default App
