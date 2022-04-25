@@ -7,9 +7,11 @@ import RouteConfig from "@/router";
 // style
 import "@/styles/reset.css";
 import "@/styles/global.css";
+import twCssModule from "@/styles/tailwind.module.css";
 
 //layout
 import BaseLayout from "@/components/layout";
+import { TailwindCssModuleProvider } from "./tailwind-styled-map";
 
 
 
@@ -44,9 +46,15 @@ export default function App() {
 
   return (
     <React.Fragment>
-      <BaseLayout>
-        <RouteConfig />
-      </BaseLayout>
+      <TailwindCssModuleProvider
+        value={{
+          tailwind: twCssModule
+        }}
+      >
+        <BaseLayout>
+          <RouteConfig />
+        </BaseLayout>
+      </TailwindCssModuleProvider>
     </React.Fragment>
   );
 }

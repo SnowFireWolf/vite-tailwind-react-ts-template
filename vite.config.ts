@@ -35,7 +35,7 @@ export default defineConfig({
   css: {
     modules: {
       //generateScopedName: "[name]__[local]___[hash:base64:5]",
-      generateScopedName: "[hash:base64:4]",
+      generateScopedName: "[hash:base64:3]",
     }
   },
 })

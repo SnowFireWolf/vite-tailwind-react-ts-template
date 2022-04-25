@@ -294,6 +294,13 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@sfirew/tailwind-styled-map@^0.0.1-beta.4":
+  version "0.0.1-beta.4"
+  resolved "https://registry.yarnpkg.com/@sfirew/tailwind-styled-map/-/tailwind-styled-map-0.0.1-beta.4.tgz#e36b041e0f176e03e353121bad93d5fec47f90cb"
+  integrity sha512-gFuhIuE36uoWBgiRaIRWjPsB4S8DuuRZ68YjKlJvUsiyuTzkCJnJxfmhoODTDCPjMJ/7ycMZisNyl4XooSrWIw==
+  dependencies:
+    react "^18.0.0"
+
 "@types/node@^17.0.23":
   version "17.0.23"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.23.tgz#3b41a6e643589ac6442bdbd7a4a3ded62f33f7da"

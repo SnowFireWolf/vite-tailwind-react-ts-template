@@ -3,20 +3,73 @@ import logo from '@/assets/logo.svg'
 import tw from '@/styles/tailwind.module.css'
 
 
+import styled from '../tailwind-styled-map';
+import Button from '@/components/system/Button';
+// import TestButton from '@/components/system/TestButton';
+
+
+// const Container = styled('div', [
+//   'mt-5',
+//   'flex',
+// ]);
+
+const Container = styled('div');
+
+
 
 export default function HomePage() {
   const [count, setCount] = React.useState<number>(0)
+  const [showContet, setShowContent] = React.useState<boolean>(false);
+
+  const handleToggle = () => {
+    setShowContent(!showContet);
+  }
+
+
+
+  const viewSxProps = [
+    'bg-blue-500',
+    'text-white',
+    'rounded',
+    'p-4',
+    'shadow',
+  ];
+
+  const hideSxProps = [
+    'hidden'
+  ];
+
+
 
   return (
     <div className={`${tw['container']} ${tw['mx-auto']}`}>
+      <Button
+        sx={[
+          'mt-5',
+          'p-3',
+          'mb-5',
+        ]}
+        type="button"
+        onClick={() => handleToggle()}
+      >
+        Toggle
+      </Button>
+
+      <Container sx={showContet ? viewSxProps : hideSxProps}>測試內容</Container>
+
       <img className={`${tw['w-1/4']}`} src={logo} alt="logo" />
       <p>Hello Vite + React + React Router!</p>
       <p>
-        <button
-          className={`${tw['mt-5']} ${tw['flex']} ${tw['flex-row']} ${tw['justify-center']} ${tw['items-center']} ${tw['p-3']} ${tw['bg-indigo-900']} ${tw['text-white']} ${tw['rounded-lg']} ${tw['shadow-lg']} ${tw['focus:outline-none']} ${tw['active:bg-indigo-800']} ${tw['disabled:opacity-80']}`}
-          type="button" onClick={() => setCount((count) => count + 1)}>
+        <Button
+          sx={[
+            'mt-5',
+            'p-3',
+          ]}
+          type="button"
+          onClick={() => setCount((count) => count + 1)}
+        >
           count is: {count}
-        </button>
+        </Button>
       </p>
       <p>
         Edit <code>./src/pages/Home.jsx</code> and save to test HMR updates.
