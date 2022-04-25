@@ -14,7 +14,7 @@ import Button from '@/components/system/Button';
 // ]);
 
 const Container = styled('div');
-
+const Image = styled('img');
 
 
 export default function HomePage() {
@@ -57,7 +57,7 @@ export default function HomePage() {
 
       <Container sx={showContet ? viewSxProps : hideSxProps}>測試內容</Container>
 
-      <img className={`${tw['w-1/4']}`} src={logo} alt="logo" />
+      <Image sx={['w-1/4']} src={logo} alt="logo" />
       <p>Hello Vite + React + React Router!</p>
       <p>
         <Button

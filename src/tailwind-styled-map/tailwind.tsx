@@ -69,6 +69,7 @@ const processAll = ({ props, styledmap, tailwind }: { props: any, styledmap?: Ar
 const createStyled = (tag: string, styledmap?: Array<string>) => {
   // console.log('styledmap', styledmap);
   const FinalTag = tag;
+  // const FinalElement = Element
 
   // console.log('result classList', classList);
 

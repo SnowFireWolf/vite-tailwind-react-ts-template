@@ -1,6 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import tw from '@/styles/tailwind.module.css';
+import styled from '@/tailwind-styled-map';
+
+
+
+const Box = styled('div');
+const LinkButton = styled('button', [
+  'py-2',
+  'pr-4',
+  'pl-3'
+]);
 
 
 
@@ -9,17 +19,20 @@ export default function BaseLayout({ ...props }) {
 
   return (
     <React.Fragment>
-      <div className={`${tw['w-full']} ${tw['bg-white']} ${tw['shadow-lg']} ${tw['py-4']}`}>
-        <div className={`${tw['flex']} ${tw['items-center']} ${tw['md:order-2']}`}>
-          <button className={`${tw['py-2']} ${tw['pr-4']} ${tw['pl-3']}`} type="button" onClick={() => navigate('/')}>
+      <Box sx={['w-full', 'bg-white', 'shadow-lg', 'py-4']}>
+        <Box sx={['flex', 'items-center', 'md:order-2']}>
+          <LinkButton type="button" onClick={() => navigate('/')}>
             Home
-          </button>
-          <button className={`${tw['py-2']} ${tw['pr-4']} ${tw['pl-3']}`} type="button" onClick={() => navigate('/about')}>
+          </LinkButton>
+          <LinkButton type="button" onClick={() => navigate('/about')}>
             About
-          </button>
-        </div>
-      </div>
-      {props.children}
+          </LinkButton>
+        </Box>
+      </Box>
+
+      <main>
+        {props.children}
+      </main>
     </React.Fragment>
   );
 }
