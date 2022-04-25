@@ -1,5 +1,5 @@
-# vite-react-typescript-template
+# vite-tailwind-react-typescript-template
 
 ### Vite + vite-plugin-html
 
-### React + React Router + TypeScript
+### Tailwind css + React + React Router + TypeScript
