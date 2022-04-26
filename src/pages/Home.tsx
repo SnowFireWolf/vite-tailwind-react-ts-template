@@ -49,8 +49,12 @@ export default function HomePage() {
     <Box sx={['container', 'mx-auto']}>
       <Typography
         sx={`
-          text-xl
+          mt-10
+          text-[2.375rem]
           text-center
+          font-bold
+          text-slate-900
+          dark:text-slate-200
         `}
       >
         Styled Map Component Test Page
@@ -70,29 +74,34 @@ export default function HomePage() {
 
       <Box sx={showContet ? viewSxProps : hideSxProps}>測試內容</Box>
 
-      <Image sx={'w-1/4'} src={logo} alt="logo" />
-      <p>Hello Vite + React + React Router!</p>
+      <Box sx="mx-auto text-center">
+        <Image sx={'w-1/4 mx-auto'} src={logo} alt="logo" />
+        <p>The Tailwind Styled Map Test!</p>
+      </Box>
 
-      <Card sx='bg-[#34eb9b] pd-5'>
-        test
+      <Card sx='mt-10 bg-[#34eb9b] pd-5'>
+        Test Background Color Card
       </Card>
 
-      <p>
+      <Box>
         <Button
           sx={[
             'mt-5',
             'p-3',
+            'mx-auto'
           ]}
           type="button"
           onClick={() => setCount((count) => count + 1)}
         >
           count is: {count}
         </Button>
-      </p>
-      <p>
-        Edit <code>./src/pages/Home.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
+      </Box>
+
+      <Box sx="mt-10 text-center">
+        <Box as="p">
+          Edit <code>./src/pages/Home.jsx</code> and save to test HMR updates.
+        </Box>
+
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -110,9 +119,9 @@ export default function HomePage() {
         >
           Vite Docs
         </a>
-      </p>
+      </Box>
 
-      <Box sx="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+      <Box sx="mt-10 py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
         <Image sx="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="https://tailwindcss.com/img/erin-lindford.jpg" alt="Woman's Face" />
         <Box sx="text-center space-y-2 sm:text-left">
           <Box sx="space-y-0.5">

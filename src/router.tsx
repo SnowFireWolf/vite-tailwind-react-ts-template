@@ -2,9 +2,14 @@
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 
-import Home from '@/pages/Home'
-import Styled from '@/pages/Styled'
-import About from '@/pages/About'
+// import Home from '@/pages/Home'
+// import Styled from '@/pages/Styled'
+// import About from '@/pages/About'
+
+
+const Home = React.lazy(() => import('@/pages/Home'));
+const Styled = React.lazy(() => import('@/pages/Styled'));
+const About = React.lazy(() => import('@/pages/About'));
 import NotFound from '@/pages/NotFound'
 
 
@@ -13,15 +18,24 @@ export default function RouteConfig() {
   return useRoutes([
     {
       path: "/",
-      element: <Home />,
+      element:
+        <React.Suspense fallback={<>failed</>}>
+          <Home />
+        </React.Suspense>
     },
     {
       path: "/styled",
-      element: <Styled />,
+      element:
+        <React.Suspense fallback={<>failed</>}>
+          <Styled />
+        </React.Suspense>
     },
     {
       path: "/about",
-      element: <About />,
+      element:
+        <React.Suspense fallback={<>failed</>}>
+          <About />
+        </React.Suspense>
     },
     {
       path: "*",

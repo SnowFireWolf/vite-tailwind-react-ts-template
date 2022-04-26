@@ -5,7 +5,8 @@ module.exports = {
     container: {
       padding: '2rem',
     },
-    extend: {},
+    extend: {
+    },
   },
   variants: {
     extend: {
