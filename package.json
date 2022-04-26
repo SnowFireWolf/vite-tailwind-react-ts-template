@@ -7,11 +7,13 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@emotion/styled": "^11.8.1",
     "@master/normal.css": "^1.9.3",
-    "@sfirew/tailwind-styled-map": "^0.0.1-beta.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "tailwind-merge": "^1.2.1",
+    "tailwind-styled-map": "^0.0.1-beta.7"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",

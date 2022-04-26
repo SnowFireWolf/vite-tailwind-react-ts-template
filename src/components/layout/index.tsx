@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import tw from '@/styles/tailwind.module.css';
 import styled from '@/tailwind-styled-map';
 
 
@@ -21,10 +20,22 @@ export default function BaseLayout({ ...props }) {
     <React.Fragment>
       <Box sx={['w-full', 'bg-white', 'shadow-lg', 'py-4']}>
         <Box sx={['flex', 'items-center', 'md:order-2']}>
-          <LinkButton type="button" onClick={() => navigate('/')}>
+          <LinkButton
+            type="button"
+            onClick={() => navigate('/')}
+          >
             Home
           </LinkButton>
-          <LinkButton type="button" onClick={() => navigate('/about')}>
+          <LinkButton
+            type="button"
+            onClick={() => navigate('/styled')}
+          >
+            Styled
+          </LinkButton>
+          <LinkButton
+            type="button"
+            onClick={() => navigate('/about')}
+          >
             About
           </LinkButton>
         </Box>

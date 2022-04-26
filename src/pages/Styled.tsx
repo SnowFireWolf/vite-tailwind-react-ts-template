@@ -15,7 +15,6 @@ import Button from '@/components/system/Button';
 
 
 const Box = styled('div');
-const Typography = styled('div');
 const Image = styled('img');
 const Card = styled.div('p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4');
 
@@ -47,15 +46,6 @@ export default function HomePage() {
 
   return (
     <Box sx={['container', 'mx-auto']}>
-      <Typography
-        sx={`
-          text-xl
-          text-center
-        `}
-      >
-        Styled Map Component Test Page
-      </Typography>
-
       <Button
         sx={[
           'mt-5',
